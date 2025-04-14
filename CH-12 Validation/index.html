@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+
+<body>
+    <h1 align="center">
+        Student Form
+    </h1>
+
+    <table align="center">
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" id="name">
+                <span id="nameerror" class="error"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Email :</td>
+            <td><input type="email" id="email">
+                <span id="emailerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>password :</td>
+            <td><input type="password" id="password">
+                <span id="passworderror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>City :</td>
+            <td>
+                <select name="city" id="city">
+                    <option value="0">--select city--</option>
+                    <option value="surat">surat</option>
+                    <option value="vapi">vapi</option>
+                    <option value="bharuch">bharuch</option>
+                </select>
+
+                <span id="cityerror"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gender :</td>
+            <td>
+                <input type="radio" name="gender" value="male">male
+                <input type="radio" name="gender" value="female">female
+                <span id="gendererror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Course :</td>
+            <td><input type="checkbox" name="course" value="html" id="course">html
+                <input type="checkbox" name="course" value="css" id="course">css
+                <input type="checkbox" name="course" value="bootstrap" id="course">bootstrap
+
+                <span id="courseerror"></span>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" id="submit" onclick="formvalidation()">submit</button></td>
+
+        </tr>
+    </table>
+
+</body>
+
+<script>
+
+    function validatePassword() {
+        let passworderror = document.getElementById('passworderror');
+        var p = document.getElementById('password').value;
+        if (p.length < 8) {
+            passworderror.innerHTML = "Your password must be at least 8 characters"
+            passworderror.style.color = "red";
+        }
+        if (p.search(/[a-z]/i) < 0) {
+            passworderror.innerHTML = "Your password must contain at least one letter."
+            passworderror.style.color = "red";
+        }
+        if (p.search(/[0-9]/) < 0) {
+            passworderror.innerHTML = "Your password must contain at least one digit."
+            passworderror.style.color = "red";
+        }
+    }
+
+
+    const formvalidation = () => {
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let city = document.getElementById('city').value;
+        let gender = document.querySelector('input[name="gender"]:checked');
+        let course = document.querySelector('input[name="course"]:checked');
+
+
+
+        if (!name) {
+            let nameerror = document.getElementById('nameerror');
+            nameerror.innerHTML = "Name is Required";
+            nameerror.style.color = "red";
+        }
+
+        if (!email) {
+            let emailerror = document.getElementById('emailerror');
+            emailerror.innerHTML = "email is Required";
+            emailerror.style.color = "red";
+        }
+        else {
+
+
+            const patten = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!patten.test(email)) {
+                let emailerror = document.getElementById('emailerror');
+                emailerror.innerHTML = "email is not valid";
+                emailerror.style.color = "red";
+            }
+
+        }
+
+        validatePassword(password);
+
+
+        if (city === '0') {
+            let cityerror = document.getElementById('cityerror');
+            cityerror.innerHTML = "city is Required";
+            cityerror.style.color = "red";
+        }
+
+        if (!gender) {
+            let gendererror = document.getElementById('gendererror');
+            gendererror.innerHTML = "gender is Required";
+            gendererror.style.color = "red";
+        }
+
+        if (!course) {
+            let courseerror = document.getElementById('courseerror');
+            courseerror.innerHTML = "course is Required";
+            courseerror.style.color = "red";
+
+
+        }
+
+    }
+
+</script>
+
+</html>

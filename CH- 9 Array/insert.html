@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Element In Array</title>
+</head>
+
+<body>
+    <h1>Insert Element In Array</h1>
+</body>
+
+<script>
+    //let n = parseInt(prompt("Enter the size of array :-"));
+
+    // let a = [];
+
+    // document.write("Input Array :-");
+
+    // for (let i = 0; i < n; i++) {
+    //     a[i] = parseInt(prompt(`the index of  ${i}`));
+
+    // }
+
+    // for (let i = 0; i < n; i++) {
+    //     document.write(`${a[i]}` + "&nbsp;");
+    // }
+
+    // document.write("<br>");
+
+    // let user = parseInt(prompt("Enter the value ? which value insert into array"));
+    // let pos = parseInt(prompt("Enter the index ?"));
+
+
+    let a = [10, 20, 40, 50];
+    let pos = 2;
+    let value = 30;
+    let n = a.length;
+
+
+    // for (let i = n; i > pos; i--) {
+    //     a[i] = a[i - 1];
+    // }
+
+    for (let i = pos; i < n; i++) {
+        a[i] = a[i + 1];
+    }
+
+    a[pos] = value;
+    n++;
+
+    console.log(a);
+
+    document.write(a);
+
+
+
+
+</script>
+
+</html>

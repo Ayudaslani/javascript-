@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+
+    <input type="text" id="demo">
+    <input type="button" value="+">
+
+    <script type="text/javascript">
+        let count = 1;
+        let increasing = true;
+
+        function add() {
+            document.getElementById('demo').value = count;
+
+            if (increasing) {
+                count++;
+                if (count > 60) {
+                    increasing = false;
+                    count = 60;
+                }
+            } else {
+                count--;
+                if (count < 1) {
+                    increasing = true;
+                    count = 1;
+                }
+            }
+        }
+
+        setInterval(add, 1000); 
+    </script>
+
+</body>
+
+</html>

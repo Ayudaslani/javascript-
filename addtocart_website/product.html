@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jewellery</title>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"><i class="fa-solid fa-gem me-2"></i>JEWELLERYLUX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <button style="border:none;background-color: transparent;" onclick="logoutdata()"><a href="#"
+                                class="text-white" style="text-decoration: none;font-size: 18px;">logout</a></button>
+                    </li>
+                    <span id="emailiduser"> Email :- </span>
+                    <button type="button" class="btn position-relative">
+                        <a class="nav-link active" aria-current="page" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping text-white" style="font-size: 25px;"></i></a>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            id="carts">
+                            0
+
+                        </span>
+                    </button>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-7 banner">
+                    <img src="assets/image/12.webp" alt="banner-image" class="img-fluid w-100 rounded shadow-sm">
+                </div>
+
+
+                <div class="col-lg-5">
+                    <div class="mb-4">
+                        <img src="assets/image/home-2.webp" style="height: 340px;" alt="right-image"
+                            class="img-fluid w-100  rounded shadow-sm">
+                    </div>
+                    <div>
+                        <img src="assets/image/home-3.webp" style="height: 340px;" alt="bottom-image"
+                            class="img-fluid w-100 h-100 rounded shadow-sm">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="title text-center">
+                    <h5 style="color: #CD865C;text-transform: uppercase;font-size: 14px;font-family: sans-serif;">
+                        Attractive jewellery</h5>
+                    <h2 style="color: #404040; font-size: 40px;font-family: serif;">Gorgeous Collections</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center text-center p-5">
+                <div class="col-3">
+                    <div class="jewellery-item">
+                        <img src="assets/image/1.webp" alt="Accessories">
+                        <p class="jewellery-name">ACCESSORIES</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="jewellery-item">
+                        <img src="assets/image/2.webp" alt="Bracelets">
+                        <p class="jewellery-name">BRACELETS</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="jewellery-item">
+                        <img src="assets/image/3.webp" alt="Bangles">
+                        <p class="jewellery-name">BANGLES</p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="jewellery-item">
+                        <img src="assets/image/4.webp" alt="Bangles">
+                        <p class="jewellery-name">BANGLES</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <section class="p-5">
+        <div class="container">
+            <div class="row">
+                <div class="title text-center pb-5">
+                    <h5 style="color: #CD865C;text-transform: uppercase;font-size: 14px;font-family: sans-serif;">
+                        STUNNING DESIGN</h5>
+                    <h2 style="color: #404040; font-size: 40px;font-family: serif;">Astonishing Jewels Collection</h2>
+                </div>
+
+                <div class="row" id="product">
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="watchman.js"></script>
+    <script src="product.js"></script>
+
+    <script>
+
+
+
+        const getproducts = () => {
+            let login = JSON.parse(localStorage.getItem('loginusers')) || [];
+            document.getElementById('emailiduser').innerHTML = login.email;
+            let allcart = JSON.parse(localStorage.getItem('cart')) || [];
+            document.getElementById('carts').innerHTML = allcart.length;
+            let tbl = " ";
+            product.map((val) => {
+                tbl += `
+                <div class="col-3">
+                        <div class="card">
+                            <img src="${val.images}" alt="Bangles">
+                            <div class="card-name">
+                                <button onclick="addcart(${val.id})" style="background-color: transparent;border: none;"><a href="#"
+                                        class="text-black text-decoration-none">ADD TO
+                                        CART</a></button>
+                            </div>
+                            
+                        </div>
+                        <div class="name text-center mt-2">
+                                <p>  ${val.name}  </p>
+                                <p>  ${val.price}  </p>
+
+                            </div>
+                        </div>
+                `
+
+            })
+            document.getElementById('product').innerHTML = tbl;
+        }
+        getproducts();
+
+
+        let allcart = JSON.parse(localStorage.getItem('cart')) || [];
+        const addcart = (id) => {
+            let login = JSON.parse(localStorage.getItem('loginuser'));
+            if (!login) {
+                window.location.href = "index.html";
+            }
+            let allcart = JSON.parse(localStorage.getItem('cart')) || [];
+            let dup = allcart.find(val => val.id == id);
+            if (dup) {
+                alert("Alredy in cart");
+                return false;
+
+            }
+            product.map((val, index) => {
+                if (val.id == id) {
+                    allcart.push(val);
+                    localStorage.setItem('cart', JSON.stringify(allcart));
+                    getproducts();
+                }
+            })
+
+        }
+
+        const logoutdata = () => {
+            localStorage.removeItem('loginusers');
+            window.location.href = "index.html";
+        }
+
+    </script>
+
+</body>
+
+
+</html>

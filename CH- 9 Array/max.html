@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maximum array</title>
+</head>
+
+<body>
+    <h1>maximum array</h1>
+</body>
+
+<script>
+    let n = parseInt(prompt("Enter any number :"));
+
+    let a = [];
+
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt(`Enter The ${i} `));
+    }
+    let max = a[0];
+    
+    for (let i = 0; i < n; i++) {
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+
+    document.write(`Maximum value ${max}`);
+</script>
+
+</html>

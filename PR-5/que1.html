@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> negetive elements in array</title>
+</head>
+
+<body>
+    <h1 align="center"> negetive elements in array.</h1>
+</body>
+
+<script>
+
+    let n = parseInt(prompt("Enter size of array"))
+    let arr = [];
+
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt(`Enter element ${i + 1}`));
+    }
+
+    document.write("Array Input :-<br>");
+    for (let i = 0; i < n; i++) {
+        document.write(arr[i] + " ");
+    }
+
+    document.write("<br>Negetive Array Element :-  " + "<br>");
+    let ans = arr.filter((val) => {
+        return val < 0;
+    })
+
+    document.write(`${ans}`);
+
+</script>
+
+</html>

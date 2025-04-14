@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance </title>
+</head>
+
+<body>
+    <h1 align="center">Inheritance</h1>
+</body>
+
+<script type="text/javascript">
+
+    //simple Inheritance
+    document.writeln(`Simple Inheritance ` + "<br>");
+    class A {
+
+        x = 10;
+        y = 20;
+
+    }
+    class B extends A {
+        ans() {
+            document.writeln(`Sum :- ${this.x + this.y} `);
+        }
+
+    }
+
+    let obj = new B();
+    obj.ans();
+
+    document.write("<br><br>");
+    document.write("Multilevel Inheritance " + "<br><br>");
+
+    //multilevel Inheritance 
+
+    class A1 {
+        x = 10;
+        y = 40;
+
+    }
+    class B1 extends A1 {
+        z = 50;
+        sum() {
+            document.write(`Sum :- ${this.x + this.y + this.z} `);
+        }
+
+
+    }
+
+    class C1 extends B1 {
+
+        ans1() {
+            this.sum();
+        }
+
+
+    }
+    let obj1 = new C1();
+    obj1.ans1();
+
+    document.write("<br><br>");
+
+    // Teacher and student 
+
+    class details {
+
+        constructor() {
+            this.id;
+            this.name;
+            this.age;
+            this.city = "surat";
+            this.role;
+        }
+
+
+    }
+    class Teacher extends details {
+        SetTeacher() {
+            this.id = parseInt(prompt("Enter the teacher id :-"));
+            this.name = prompt("Enter the Teacher  name :-");
+            this.age = parseInt(prompt("Enter the teacher age :-"));
+            this.role = prompt("Enter the teacher role :-");
+        }
+
+        getTeacher() {
+            document.write(`Teacher ID :- ${this.id}` + "<br>");
+            document.write(`Teacher Name :- ${this.name}` + "<br>");
+            document.write(`Teacher age :- ${this.age}` + "<br>");
+            document.write(`Teacher city :- ${this.city}` + "<br>");
+            document.write(`Teacher role :- ${this.role}` + "<br>");
+
+        }
+
+
+    }
+    class Student extends Teacher {
+        SetStudent() {
+            this.id = parseInt(prompt("Enter the Student id :-"));
+            this.name = prompt("Enter the Student  name :-");
+            this.age = parseInt(prompt("Enter the Student age :-"));
+
+        }
+
+        getStudent() {
+            document.write(`Student ID :- ${this.id}` + "<br>");
+            document.write(`Student Name :- ${this.name}` + "<br>");
+            document.write(`Student age :- ${this.age}` + "<br>");
+            document.write(`Student city :- ${this.city}` + "<br>");
+
+
+        }
+    }
+
+    // animal
+
+    class Animal {
+        constructor() {
+            this.name;
+            this.color;
+        }
+
+    }
+    class Cat extends Animal {
+        Setcat() {
+            this.name = prompt("Enter the cat name :-");
+            this.color = prompt("Enter the cat color :-");
+
+        }
+        getcat() {
+            document.write(`Cat name :- ${this.name}` + "<br>");
+            document.write(`Cat color :- ${this.color}` + "<br");
+        }
+
+    }
+    class dog extends Cat {
+        Setdog() {
+            this.name = prompt("Enter the dog name :-");
+            this.color = prompt("Enter the dog color :-");
+
+        }
+        getdog() {
+            document.write(`Dog name :- ${this.name}` + "<br>");
+            document.write(`Dog color :- ${this.color}` + "<br");
+        }
+    }
+
+    let student1 = new Student();
+    let dog1 = new dog();
+
+    let arr = [student1, dog1];
+
+    arr.forEach((val) => {
+        student1.SetStudent();
+        student1.getStudent();
+        document.write("<br>")
+        student1.SetTeacher();
+        student1.getTeacher();
+
+        document.write("<br>");
+        dog1.Setcat();
+        dog1.getcat();
+        document.write("<br>");
+        dog1.Setdog();
+        dog1.getdog();
+        document.write("<br>");
+
+
+    })
+
+
+
+
+
+
+</script>
+
+</html>

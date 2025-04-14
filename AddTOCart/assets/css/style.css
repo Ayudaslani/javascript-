@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background: linear-gradient(135deg, #014d4e, #026666);
+}
+
+nav i {
+    font-size: 16px;
+}
+
+img {
+
+    height: 100%;
+}
+
+i {
+    font-size: 50px;
+}
+
+.img-wrapper {
+    height: 200px;
+    overflow: hidden;
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-img-top:hover {
+    transform: scale(1.1);
+  }
+  
+  

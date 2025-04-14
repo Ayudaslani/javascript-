@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> marksheet</title>
+</head>
+
+<body>
+
+    <h1> marksheet</h1>
+
+</body>
+
+<script>
+    let html, css, c, bootstrap, javascript;
+
+    html = parseInt(prompt("Enter html per :"));
+    css = parseInt(prompt("Enter css per :"));
+    c = parseInt(prompt("Enter c per :"));
+    bootstrap = parseInt(prompt("Enter bootstrap per :"));
+    javascript = parseInt(prompt("Enter javascript per :"));
+
+    let total = html + css + c + bootstrap + javascript;
+
+    let per = total / 5;
+
+    if (per >= 91 && per <= 100) {
+        alert("Grade : A+");
+    } else if (per >= 81 && per <= 90) {
+        alert("Grade : A");
+    } else if (per >= 71 && per <= 80) {
+        alert("Grade : B+");
+    } else if (per >= 61 && per <= 70) {
+        alert("Grade : B");
+    } else if (per >= 61 && per <= 60) {
+        alert("Grade : C+");
+    } else if (per >= 51 && per <= 50) {
+        alert("Grade : C");
+    } else if (per >= 41 && per <= 40) {
+        alert("Grade : D");
+    } else if (per >= 33 && per <= 0) {
+        alert("You are Fail... !!!");
+    }
+    else {
+        alert("this is wrong !!!!!");
+    }
+</script>
+
+</html>

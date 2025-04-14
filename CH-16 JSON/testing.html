@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+</head>
+
+<body>
+    <h1 align="center">
+        CRUD opreation
+    </h1>
+    <input type="hidden" id="editedid">
+    <table align="center">
+
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Phone :</td>
+            <td><input type="text" id="phone"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" value="submit" id="add" onclick="addRecord()">
+                <input type="button" value="edit" id="edit" onclick="updateRecord()">
+
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table align="center" border="1" cellpadding="15px">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>phone</th>
+                <th>Action</th>
+
+            </tr>
+        </thead>
+        <tbody id="getdata">
+
+        </tbody>
+    </table>
+
+    <script src="testing.js">
+
+    </script>
+</body>
+
+</html>

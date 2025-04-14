@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add user and view user</title>
+</head>
+
+<body>
+    <h1 align="center">Add user And View User</h1>
+
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <td>name :</td>
+                <td><input type="text" id="name"></td>
+            </tr>
+            <tr>
+                <td>phone :</td>
+                <td> <input type="number" id="phone"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="submit">submit</button></td>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <br><br>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th>GRID</th>
+                <th>NAME</th>
+                <th>PHONE</th>
+            </tr>
+        </thead>
+        <tbody id="adduser"></tbody>
+    </table>
+
+    <script>
+        let users = [];
+
+        let button = document.getElementById('submit');
+        button.addEventListener('click', function () {
+
+            let name = document.getElementById("name").value;
+            let phone = document.getElementById("phone").value;
+
+            let obj = {
+                grid: Math.floor(Math.random() * 1000000),
+                name: name,
+                phone: phone,
+            }
+            users.push(obj);
+            alert("succesfully");
+            document.getElementById('name').value = "";
+            document.getElementById('phone').value = "";
+            viewuser();
+        })
+
+
+        let viewuser = () => {
+            tbl = ' ';
+            users.forEach((val) => {
+                tbl += `
+                <tr>
+                    <td>${val.grid} </td>
+                    <td>${val.name} </td>
+                    <td>${val.phone} </td>
+                <tr>
+            `
+            })
+            document.getElementById('adduser').innerHTML = tbl;
+
+        }
+
+
+
+
+
+        // add user
+
+
+        let add = () => {
+
+            // let name = document.getElementById("name").value;
+            // let phone = document.getElementById("phone").value;
+
+            // let obj = {
+            //     grid: Math.floor(Math.random() * 1000000),
+            //     name: name,
+            //     phone: phone,
+            // }
+            // users.push(obj);
+            // alert("succesfully");
+            // document.getElementById('name').value = "";
+            // document.getElementById('phone').value = "";
+            // viewuser();
+
+
+        }
+    </script>
+
+    <script>
+        const fruits = ["apple", "banana", "cherry"];
+        const newFruits = fruits.toSpliced(1, 0, "orange", "grape");
+
+        console.log(newFruits);
+        console.log(fruits); 
+    </script>
+
+
+</body>
+
+
+
+</html>

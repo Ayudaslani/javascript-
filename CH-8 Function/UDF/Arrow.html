@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+
+    <h1> Arrow Function </h1>
+
+
+</body>
+
+<script>
+
+    let x = parseInt(prompt("Enter any number :"));
+    let y = parseInt(prompt("Enter any number :"));
+
+    const sum = (a, b) => a + b
+
+    document.write(`${sum(x, y)}`);
+
+
+
+    const bio = (name, age, course) => {
+        document.write("name : " + name);
+        document.write("age  : " + age);
+        document.write("course  : " + course);
+    }
+    bio("Ayushi", 20, "full stack");
+
+
+</script>
+
+</html>

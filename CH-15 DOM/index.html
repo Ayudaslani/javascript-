@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Document Object Model</title>
+    <style>
+        /* p {
+            color: blue !important;
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div id="root">
+
+    </div>
+
+    <script type="text/javascript">
+        let root = document.getElementById('root');
+        let p = document.createElement('p');
+        p.innerHTML = "Hello";
+        p.style.color = "red";
+        p.setAttribute('id', 'demo');
+        p.setAttribute('class', 'demo1');
+
+        p.addEventListener('click', () => {
+            p.innerHTML = "Ayushi Daslani";
+            p.style.color = "green";
+            p.style.transform = "translate(50px)";
+            p.style.transition = "0.5s"
+            p.style.width = "150px"
+            p.style.height = "150px"
+            p.style.backgroundColor = "pink"
+
+
+        })
+
+        setTimeout(() => {
+            p.style.transform = "translate(0px)";
+            p.style.transition = "0.5s"
+
+        }, 5000)
+
+
+
+        root.appendChild(p);
+
+
+    </script>
+</body>
+
+</html>

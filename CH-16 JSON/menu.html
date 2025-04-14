@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+
+</head>
+
+<body>
+    <h1 align="center">Fill The Form</h1>
+
+    <div>
+        <input type="hidden" id="editid">
+        <table align="center" cellpadding="8px">
+
+            <tr>
+                <td>Book Title :</td>
+                <td><input type="text" id="Title"></td>
+            </tr>
+            <tr>
+                <td>Book Author :</td>
+                <td><input type="text" id="Author"></td>
+            </tr>
+            <tr>
+                <td>Publication Year :</td>
+                <td><input type="text" id="Year"></td>
+            </tr>
+
+            <tr>
+                <td>Book Price :</td>
+                <td><input type="text" id="Price"></td>
+            </tr>
+            <tr>
+                <td>Stock Quantity :</td>
+                <td><input type="text" id="Quantity"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="submit" id="add" onclick="addRecord()">
+                    <input type="button" value="Edit" id="edit" onclick="updateRecord()">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br><br>
+    <table border="1" align="center" cellpadding="14px">
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>Book Title </th>
+                <th>Book Author</th>
+                <th>Publication Year</th>
+                <th>Book Price</th>
+                <th>Stock Quantity</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="getdata">
+
+        </tbody>
+    </table>
+
+
+    <script src="menu.js"></script>
+</body>
+
+</html>

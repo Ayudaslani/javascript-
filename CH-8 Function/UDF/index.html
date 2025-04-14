@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function </title>
+</head>
+
+<body>
+    <h1> User Define Function </h1>
+</body>
+<script>
+
+    /* 
+
+    TNRN = Take nothing return Nothing
+    TSRN = Take something return nothing
+    TNRS = Take Nothing Return Something
+    TSRS = Take Something Return Something
+
+    function funName () {
+    
+    // statement
+    }
+
+
+    */
+
+    document.write("<hr>");
+    printName()
+    document.write("<hr>");
+
+
+    document.write(" <br> TSRN = Take something return nothing <br>");
+    const X = parseInt(prompt("Enter Any Number"));
+    const Y = parseInt(prompt("Enter Any Number"));
+
+
+    document.write(`${sum(X, Y)}`);
+    document.write("<hr>");
+
+    document.write(" <br> TNRS = Take nothing return something <br>");
+
+    document.write(`cube is ${cube()}`);
+    document.write("<hr>");
+
+    document.write(" <br> TSRS = Take something return something <br>");
+    let ans = mul(X, Y);
+    document.write(` multiplication is ${ans}`);
+
+    document.write("<hr>");
+
+
+
+
+    function printName() {
+
+        document.write("Take nothing return Nothing <br>");
+
+        let i = 1;
+        while (i <= 10) {
+            document.write(i + " ");
+            i++
+        }
+    }
+
+    function sum(a, b) {
+        document.write(`${a} + ${b} = ${a + b}`);
+    }
+
+    function cube() {
+
+        let n = parseInt(prompt("Enter any number :"));
+
+        return n * n * n;
+
+    }
+
+    function mul(a, b) {
+
+        return a * b;
+    }
+
+
+    
+
+
+
+
+
+</script>
+
+</html>

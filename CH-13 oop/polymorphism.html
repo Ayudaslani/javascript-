@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>polymorphism</title>
+</head>
+
+<body>
+    <h1 align="center">polymorphism</h1>
+</body>
+
+<script>
+    class A {
+        area() {
+            let r = 4;
+            document.write(`Circle Area :- ${3.14 * r * r}` + "<br>");
+        }
+    }
+    class B {
+
+        area() {
+            let b = 10, h = 10;
+            document.write(`Traingle Area :- ${0.5 * b * h}` + "<br>");
+        }
+
+    }
+    class C {
+        area() {
+            let p = 10, r = 20, n = 30;
+            let ans = p * r * n / 100;
+            document.write(`Simple Interset :- ${ans}`);
+        }
+
+    }
+
+    let obj = new A();
+    obj.area();
+    let obj1 = new B();
+    obj1.area();
+    let obj2 = new C();
+    obj2.area();
+</script>
+
+</html>

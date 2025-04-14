@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> insert element in array position wise</title>
+</head>
+
+<body>
+    <h1 align="center"> insert element in array position wise</h1>
+</body>
+
+<script>
+    let n = parseInt(prompt("Enter the size of array :"));
+
+    let arr = [];
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt(`Enter the element ${i + 1}`));
+    }
+
+    document.write("Inputed Array :<br>");
+    for (let i = 0; i < n; i++) {
+        document.write(arr[i] + " ");
+    }
+
+    document.write("<br>");
+
+    let value = parseInt(prompt("Enter the value"));
+    let pos = parseInt(prompt("Enter the position "));
+
+    for (i = n; i > pos; i--) {
+        arr[i] = arr[i - 1];
+    }
+    n++;
+
+    arr[pos] = value;
+
+
+    document.write("Output Array :<br>");
+    for (let i = 0; i < n; i++) {
+        document.write(arr[i] + " ");
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ascending order</title>
+</head>
+
+<body>
+    <h1>Ascending order</h1>
+
+</body>
+<script>
+    let arr = [80, 70, 60, 50, 40];
+    let n = arr.length;
+
+    for (let i = 0; i < n; i++) {
+        for (let j = i + 1; j < n; j++) {
+            if (arr[i] > arr[j]) {
+                let n = arr[i];
+                arr[i] = arr[j];
+                arr[j] = n;
+            }
+        }
+        document.write(`${arr[i]}` + "&nbsp;");
+    }
+</script>
+
+</html>

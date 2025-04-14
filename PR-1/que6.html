@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Gross Salary</title>
+</head>
+
+<body>
+    <h1 align="center "> Count Total Gross Salary</h1>
+
+    <script>
+        let basesalary;
+        let hra;
+        let da;
+        let ta;
+
+
+        basesalary = parseInt(prompt("Enter Base Salary :"));
+
+        hra = parseInt(basesalary * 10 / 100);
+        da = parseInt(basesalary * 5 / 100);
+        ta = parseInt(basesalary * 8 / 100);
+
+
+        document.write(` Total Gross salary   =>  ${basesalary + hra + da + ta}`);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangle is Vaild or Not</title>
+</head>
+
+<body>
+    <h1 align="center">Triangle is Vaild or Not </h1>
+
+</body>
+
+<script>
+
+    let side1 = parseInt(prompt("Enter The first side "))
+    let side2 = parseInt(prompt("Enter The second side "))
+    let side3 = parseInt(prompt("Enter The Third side "))
+
+    function TNRN() {
+        if (side1 + side2 > side3) {
+            if (side1 + side3 > side2) {
+                if (side2 + side3 > side1) {
+                    document.write(`Triangle is  vaild ...`);
+                } else {
+                    document.write(`Triangle is not vaild ...`);
+                }
+
+            } else {
+                document.write(`Triangle is not vaild ...`);
+
+            }
+
+        } else {
+            document.write(`Triangle is not vaild ...`);
+        }
+    }
+    document.write("Take nothing return nothing ..<br>");
+    TNRN();
+    document.write("<br>");
+    document.write("<br>");
+
+    function TSRN(side1, side2, side3) {
+        if (side1 + side2 > side3) {
+            if (side1 + side3 > side2) {
+                if (side2 + side3 > side1) {
+                    document.write(`Triangle is  vaild ...`);
+                } else {
+                    document.write(`Triangle is not vaild ...`);
+                }
+
+            } else {
+                document.write(`Triangle is not vaild ...`);
+
+            }
+
+        } else {
+            document.write(`Triangle is not vaild ...`);
+        }
+    }
+    document.write("Take something return nothing ..<br>");
+    TSRN(side1, side2, side3);
+
+    document.write("<br>")
+    document.write("<br>")
+
+
+    function TNRS() {
+        if (side1 + side2 > side3) {
+            if (side1 + side3 > side2) {
+                if (side2 + side3 > side1) {
+                    document.write(`Triangle is  vaild ...`);
+                } else {
+                    document.write(`Triangle is not vaild ...`);
+                }
+
+            } else {
+                document.write(`Triangle is not vaild ...`);
+
+            }
+
+        } else {
+            document.write(`Triangle is not vaild ...`);
+        }
+
+        return [side1, side2, side3];
+    }
+    document.write("Take nothing return something ..<br>");
+    TNRS();
+
+    document.write("<br>")
+    document.write("<br>")
+
+    function TSRS(side1, side2, side3) {
+        if (side1 + side2 > side3) {
+            if (side1 + side3 > side2) {
+                if (side2 + side3 > side1) {
+                    document.write(`Triangle is  vaild ...`);
+                } else {
+                    document.write(`Triangle is not vaild ...`);
+                }
+
+            } else {
+                document.write(`Triangle is not vaild ...`);
+
+            }
+
+        } else {
+            document.write(`Triangle is not vaild ...`);
+        }
+
+        return [side1, side2, side3];
+    }
+    document.write("Take something return something ..<br>");
+    TSRS(side1, side2, side3);
+
+</script>
+
+</html>

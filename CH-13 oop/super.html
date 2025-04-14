@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>super Keyword</title>
+</head>
+
+<body>
+    <h1>Super keyword</h1>
+
+    <script type="text/javascript">
+
+        class A {
+            constructor(name) {
+                this.a = 10;
+                this.b = 20;
+                this.c = 90;
+                this.name = name;
+            }
+            result() {
+                document.writeln(`Sum of :- ${this.a + this.b} `);
+            }
+        }
+        class B extends A {
+            constructor(name) {
+                super();
+                document.writeln(this.c);
+                document.write(name);
+
+            }
+
+        }
+        let b = new B("ajay");
+        b.result();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(246 245 240);
+}
+
+/* 
+nav {
+    background: linear-gradient(135deg, #014d4e, #026666);
+}
+
+nav i {
+    font-size: 16px;
+}
+
+img {
+
+    height: 100%;
+}
+
+i {
+    font-size: 50px;
+} */
+
+.navbar {
+    background-color: #83735f;
+    /* Light gold-tan */
+    color: #4B3621;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar a {
+    color: #4B3621;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #BFA37A;
+    /* Gold accent */
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .cart-icon {
+    color: #A67B5B;
+    position: relative;
+}
+
+
+.collection {
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.jewellery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.jewllery-item img {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    display: flex;
+}
+
+.jewellery-name {
+    margin-top: 25px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.jewellery-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.jewellery-item img:hover {
+    transform: scale(1.05);
+}
+
+.card {
+    position: relative;
+}
+
+.card-name {
+    position: absolute;
+    visibility: hidden;
+    left: 30%;
+    bottom: 8%;
+    opacity: 0;
+    background-color: transparent;
+    color: white;
+    border-radius: 8px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.card-name p {
+    text-align: center;
+}
+
+.card:hover .card-name {
+    visibility: visible;
+    opacity: 1;
+}

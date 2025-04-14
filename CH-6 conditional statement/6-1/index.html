@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statement</title>
+</head>
+
+<body>
+    <h1>Conditional Statement</h1>
+
+</body>
+
+<script>
+
+    /* 
+        1. if statement
+
+            if (condition) {
+                 statement
+            }
+
+        2. if-else statement
+
+            if (condition) {
+                statement
+            } else {
+                statement 
+            }
+
+        3. ladder if statement
+
+            if (conditon) {
+                 statement
+            } else if(condtion) {
+                 statement 
+            } else if(condition n) {
+                 statement 
+            } else {
+                statement 
+            }
+        4. nested if-else staement
+
+            if(condittion) {
+                 if (condtion)  {} else {}
+            } else  {
+                if (condtion)  {} else {}
+            }
+
+    */
+
+    let age = parseInt(prompt("Enter your age :"));
+
+    if (age >= 18 && age <= 200) {
+        alert("You can vote !!!");
+    } else {
+        alert("you can't vote !!!");
+
+    }
+
+    let marks = parseInt(prompt("Enter your marks : "));
+
+    if (marks >= 91 && marks <= 100) {
+        alert("Grade : A+");
+    } else if (marks >= 81 && marks <= 90) {
+        alert("Grade : A");
+    } else if (marks >= 71 && marks <= 80) {
+        alert("Grade : B+");
+    } else if (marks >= 61 && marks <= 70) {
+        alert("Grade : B");
+    } else if (marks >= 61 && marks <= 60) {
+        alert("Grade : C+");
+    } else if (marks >= 51 && marks <= 50) {
+        alert("Grade : C");
+    } else if (marks >= 41 && marks <= 40) {
+        alert("Grade : D");
+    } else if (marks >= 33 && marks <= 0) {
+        alert("You are Fail... !!!");
+    }
+    else {
+        alert("please input correct marks . this is wrong !!!!!");
+    }
+
+    let a, b, c;
+
+    a = parseInt(prompt("Enter a value :"));
+    b = parseInt(prompt("Enter b value :"));
+    c = parseInt(prompt("Enter c value :"));
+
+    if (a > b) {
+        if (a > c) {
+            alert(`${a} is maximum number `);
+        } else {
+            alert(`${c} is maximum number `);
+        }
+    } else {
+        if (b > c) {
+            alert(`${b} is maximum number `);
+        } else {
+            alert(`${c} is maximum number `);
+        }
+    }
+
+</script>
+
+</html>

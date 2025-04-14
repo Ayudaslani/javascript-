@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <br>
+    <hr>
+    <h1>Without space patten</h1>
+
+    <hr>
+    <br>
+</body>
+
+<script>
+    /*    
+    pattern : 1. without space pattern
+              2. with space pattern
+              3. custom pattern
+
+
+    */
+
+
+
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= 5; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j >= 1; j--) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j >= 1; j--) {
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 5; j >= i; j--) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j <= 5; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j <= 5; j++) {
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = 1; j <= i; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j <= 5; j++) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j <= 5; j++) {
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 5; j >= i; j--) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+            document.write(j + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+            document.write(i + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write('*' + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+            document.write('*' + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j >= 1; j--) {
+            if (j % 2 == 0) {
+                document.write("0 ");
+            }
+            else {
+                document.write("1 ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 5; i >= 1; i--) {
+        for (let j = i; j >= 1; j--) {
+            if (j % 2 == 0) {
+                document.write("0 ");
+            }
+            else {
+                document.write("1 ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                document.write("0 ");
+            }
+            else {
+                document.write("1 ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 == 0) {
+                document.write("1 ");
+            }
+            else {
+                document.write("0 ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    let n = 1;
+    for (let i = 1; i <= 5; i++) {
+        for (let j = 1; j <= i; j++) {
+            document.write(n + " ");
+            n++;
+
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+
+    for (let i = 1; i <= 5; i++) {
+        for (let j = i; j >= 1; j--) {
+            if (j % 2 == 0) {
+                document.write("| ");
+            }
+            else {
+                document.write("- ");
+            }
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+
+    for (let i = 65; i <= 69; i++) {
+        for (let j = 65; j <= i; j++) {
+            document.write(String.fromCharCode(j) + " ");
+        }
+        document.write("<br>");
+    }
+
+    document.write("<br>");
+
+    let x = 65;
+
+    for (let i = 65; i <= 69; i++) {
+        for (let j = 65; j <= i; j++, x++) {
+            document.write(String.fromCharCode(x) + " ");
+        }
+        document.write("<br>");
+    }
+
+
+
+
+
+
+
+</script>
+
+</html>

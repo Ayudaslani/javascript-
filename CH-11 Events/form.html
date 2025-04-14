@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+
+<body>
+    <h1 align="center">Student Record</h1>
+
+    <div class="data">
+        <table align="center">
+            <thead>
+                <tr>
+                    <td>Roll no :</td>
+                    <td><input type="text" id="rollno"></td>
+                </tr>
+                <tr>
+                    <td>Name : </td>
+                    <td><input type="text" id="name"></td>
+                </tr>
+                <tr>
+                    <td>Email :</td>
+                    <td><input type="email" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td><input type="radio" name="gender" value="male" id="gender">male
+                        <input type="radio" name="gender" value="female" id="gender">female
+                    </td>
+                </tr>
+                <tr>
+                    <td>city :</td>
+                    <td>
+                        <select name="" id="city">
+                            <option value="0">--select city--</option>
+                            <option value="surat">surat</option>
+                            <option value="vapi">vapi</option>
+                            <option value="baroda">baroda</option>
+                        </select>
+                    </td>
+                </tr>
+
+
+
+                <tr>
+                    <td>course :</td>
+                    <td><input type="checkbox" name="course" value="html" id="course">html
+                        <input type="checkbox" name="course" value="css" id="course">css
+                        <input type="checkbox" name="course" value="bootstrap" id="course">bootstrap
+                    </td>
+                </tr>
+
+                <tr>
+                    <td></td>
+                    <td><button id="submit">submit</button></td>
+                </tr>
+            </thead>
+
+
+        </table>
+    </div>
+
+    <br><br>
+    <table border="1" cellpadding="10px" align="center">
+        <thead>
+            <tr>
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>course</th>
+            </tr>
+
+        </thead>
+        <tbody id="save">
+
+        </tbody>
+    </table>
+
+</body>
+
+
+</html>
+<script>
+    let user = [];
+
+    let viewuser = () => {
+        tbl = ' ';
+        user.forEach((val) => {
+            tbl += `
+
+                <tr>
+                    <td>${val.rollno}</td>
+                    <td>${val.name}</td>
+                    <td>${val.email}</td>
+                    <td>${val.gender}</td>
+                    <td>${val.city}</td>
+                    <td>${val.course}</td>
+                    
+                </tr>
+            `
+        })
+        document.getElementById('save').innerHTML = tbl;
+
+    }
+
+
+
+    let button = document.getElementById('submit');
+    button.addEventListener('click', function () {
+
+        let rollno = document.getElementById('rollno').value;
+        let name = document.getElementById('name').value;
+        let email = document.getElementById('email').value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        let city = document.getElementById('city').value;
+        let course = document.getElementsByName('course');
+        let course_arr = [];
+        course.forEach((val) => {
+            if (val.checked) {
+                course_arr.push(val.value);
+            }
+
+        })
+
+        let obj = {
+            rollno: rollno,
+            name: name,
+            email: email,
+            gender: gender,
+            city: city,
+            course: course_arr
+        }
+
+        user.push(obj);
+        alert("ok");
+        document.getElementById('rollno').value = '  ';
+        document.getElementById('name').value = ' ';
+        document.getElementById('email').value = ' ';
+        document.querySelector('input[name="gender"]:checked').checked = false;
+        document.getElementById('city').value = ' ';
+
+        course.forEach((val) => {
+            if (val.checked) {
+                val.checked = false;
+            }
+        })
+
+        viewuser();
+    })
+
+</script>

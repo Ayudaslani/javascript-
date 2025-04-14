@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add records in Table</title>
+</head>
+
+<body>
+    <h1 align="center">
+
+        add Record in table
+    </h1>
+
+    <table align="center">
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>Age :</td>
+            <td><input type="text" id="age"></td>
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td>
+                <input type="radio" name="gender" value="male">male
+                <input type="radio" name="gender" value="female">female
+
+            </td>
+        </tr>
+        <tr>
+            <td>City :</td>
+            <td>
+                <select name="city" id="city">
+                    <option value="0">--select city--</option>
+                    <option value="surat">surat</option>
+                    <option value="vapi">vapi</option>
+                    <option value="rajkot">rajkot</option>
+
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Course :</td>
+            <td>
+                <input type="checkbox" name="course" value="html">html
+                <input type="checkbox" name="course" value="python">python
+                <input type="checkbox" name="course" value="java">java
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button onclick="adduser()">submit</button></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <table border="1" cellpadding="15px" align="center">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>City</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody id="save">
+
+        </tbody>
+
+    </table>
+
+</body>
+<script>
+    let main = [];
+    const viewuser = () => {
+        let tbl = " ";
+        main.forEach((val) => {
+            tbl += `
+            <tr>
+
+                <td>${val.name}</td>
+                <td>${val.age}</td>
+                <td>${val.gender}</td>
+                <td>${val.city}</td>
+                <td>${val.course}</td>
+            </tr>
+            
+            
+            `
+        })
+        document.getElementById('save').innerHTML = tbl;
+
+    }
+
+
+    const adduser = () => {
+        let name = document.getElementById('name').value;
+        let age = document.getElementById('age').value;
+        let gender = document.querySelector('input[name="gender"]:checked').value;
+        let city = document.getElementById('city').value;
+        let course = document.getElementsByName('course');
+
+        let arr = [];
+        course.forEach((val) => {
+            if (val.checked) {
+                arr.push(val.value);
+            }
+        })
+
+
+
+        let obj = {
+            name: name,
+            age: age,
+            gender: gender,
+            city: city,
+            course: arr
+        }
+
+        main.push(obj);
+        alert("add record sucessfully");
+        document.getElementById('name').value = '';
+        document.getElementById('age').value = '';
+        document.querySelector('input[name="gender"]:checked').checked = false;
+        document.getElementById('city').value = '';
+        course.forEach((val) => {
+            if (val.checked) {
+                val.checked = false;
+
+            }
+        })
+        viewuser();
+    }
+</script>
+
+</html>

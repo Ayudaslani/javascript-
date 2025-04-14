@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method Function</title>
+</head>
+
+<body>
+    <h1>Array Method Function</h1>
+
+</body>
+
+<script type="text/javascript">
+
+
+    // let a = [10, 20, 30, 40];
+
+    // a.push(50);
+
+    // document.write(a);
+
+    // a.pop();
+
+    //a.unshift(100);
+
+    // a.shift();
+
+    // document.write(a);
+
+
+    // let arr = [];
+    // for (let i = 0; i < 10; i++) {
+    //     arr[i] = i + 1;
+    // }
+
+    //console.log(arr);
+
+    // let arr = [10, 20, 30];
+
+    //    let ans = arr.reduce((val, index) => {
+    //     return val + index;
+    // }, 0)
+    // console.log(ans);
+
+
+
+    // map method
+    let arr = [1, 2, 3, 4, 5];
+
+    let ans = arr.map((val, index) => {
+        return val * val;
+    })
+
+    console.log(ans);
+
+
+    // filter method
+    let ans1 = arr.filter((val, index) => {
+        return val % 2 != 0;
+    })
+
+    console.log(ans1);
+
+
+    // foreach method 
+    arr.forEach((val, index) => {
+        if (val > 3) {
+            console.log(val);
+        }
+    })
+
+
+    // indexof method
+
+    let ans3 = arr.indexOf((55));
+    let ans4 = arr.indexOf((1));
+
+    console.log(ans3);
+    console.log(ans4);
+
+    //includes method 
+
+    let ans5 = arr.includes(5);
+
+    console.log(ans5);
+
+
+    //findIndex method
+
+    let ans6 = arr.findIndex((val, index) => {
+        return val == 55;
+    })
+
+    console.log(ans6);
+
+
+    // evey method
+
+
+    let a = [10, 55, 77, 88, 33];
+    let ans7 = a.every((val, index) => {
+        return val >= 10;
+    })
+
+    console.log(ans7);
+
+    //some method
+    let a1 = [23, 34, 56, 88, 99];
+    let ans8 = a1.some((val, index) => {
+        return val > 50;
+    })
+
+    console.log(ans8);
+
+    // slice  method
+
+    let array = [10, 20, 30, 4, 5, 6, 7, 8];
+
+    let ans9 = array.slice(1, 5);
+    console.log(ans9);
+
+
+    // join method
+
+    let aa = ["apple", "banana", "graps", "mango"];
+
+    let ans10 = aa.join(" ");
+
+    console.log(ans10);
+
+    // At method
+
+    let fruits = ["Banana", "apple", "mango", "graps"];
+
+    let ans11 = fruits.at(3);
+
+    console.log(ans11);
+
+    // Tostring method
+    let fruits1 = [12, 44, 55];
+    let ans12 = fruits1.toString();
+
+    console.log(ans12);
+
+
+    //reduce method
+
+    let number = [10, 20, 30];
+
+    let ans13 = number.reduce((val, index) => {
+        return val + index;
+    })
+
+    console.log(ans13);
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

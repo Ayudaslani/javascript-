@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add To Cart</title>
+
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#"><i class="fa-solid fa-gem me-2"></i>JEWELLERYLUX</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <span class="text-white" id="username">Name :- </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="text-white" id="useremail">Email :- </span>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex align-items-center">
+                    <li class="nav-item">
+                        <button style="border:none;background-color: transparent;" onclick="logoutdata()"><a href="#"
+                                class="text-white" style="text-decoration: none;font-size: 18px;">logout</a></button>
+                    </li>
+                    <button type="button" class="btn position-relative">
+                        <a class="nav-link active" aria-current="page" href="cart.html">
+                            <i class="fa-solid fa-cart-shopping text-white" style="font-size: 25px;"></i></a>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                            id="carts">
+                            0
+
+                        </span>
+                    </button>
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container">
+        <div class="row" id="product">
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script src="watchman.js"></script>
+<script src="products.js"></script>
+
+
+<script>
+    const products = () => {
+        let allcart = JSON.parse(localStorage.getItem('carts')) || [];
+        document.getElementById('carts').innerHTML = allcart.length;
+        let login = JSON.parse(localStorage.getItem('login')) || [];
+        document.getElementById('username').innerHTML = login.name;
+        document.getElementById('useremail').innerHTML = login.email;
+
+        let tbl = "";
+        product.map((val, index) => {
+            const { id, name, price, images } = val;
+            tbl += `
+                <div class="col-md-3 mt-5 ">
+                    <div class="card h-100">
+                       <div class="img-wrapper">
+                            <img src="${images}" class="card-img-top" alt="${name}">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${name}</h5>
+                            <p class="card-text">Price: ₹${price}</p>
+                            <a href="#" class="btn btn-primary" onclick="addcart(${id})">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+               
+            `;
+        });
+        document.getElementById('product').innerHTML = tbl;
+
+
+    }
+    products();
+
+
+
+    let allcart = JSON.parse(localStorage.getItem('carts')) || [];
+    const addcart = (id) => {
+        let login = JSON.parse(localStorage.getItem('login'));
+
+        if (!login) {
+            alert('Please login to add product to cart');
+            window.location.href = "index.html";
+        }
+        let allcart = JSON.parse(localStorage.getItem('carts')) || [];
+        let dup = allcart.find(val => val.id == id);
+        if (dup) {
+            alert("already add to cart");
+            return false;
+
+        }
+
+        product.map((val) => {
+            if (val.id == id) {
+                allcart.push(val);
+                localStorage.setItem('carts', JSON.stringify(allcart));
+                products();
+            }
+
+        })
+    }
+
+    const logoutdata = () => {
+        localStorage.removeItem('users');
+        window.location.href = "index.html"
+    }
+
+
+</script>
+
+
+</html>

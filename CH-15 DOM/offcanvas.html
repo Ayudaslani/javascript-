@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offcanvas</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <style>
+        h2 {
+            text-align: right;
+        }
+
+        h4 {
+            text-align: right;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+
+    </div>
+
+</body>
+
+<script type="text/javascript">
+
+    let root = document.getElementById('root');
+
+
+
+    let box = document.createElement('div');
+    box.setAttribute('id', 'box')
+    box.setAttribute('class', 'box');
+    box.style.position = 'absolute';
+    box.style.top = '0%';
+    box.style.left = '0%';
+    box.style.width = '100%';
+    box.style.height = "100%"
+    box.style.width = "300px"
+    box.style.backgroundColor = "pink"
+    box.style.display = "none";
+    box.innerHTML = "<h2>close</h2>";
+
+    box.addEventListener('click', function () {
+        box.style.display = "none";
+        nav.style.display = "none";
+
+
+    })
+
+
+    let nav = document.createElement('nav');
+    let ul = document.createElement('ul');
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    nav.setAttribute('id', 'nav');
+    ul.style.listStyle = "none"
+    nav.style.position = "absolute";
+    nav.style.display = "none";
+    a.style.color = "black";
+    a.style.textDecoration = "none";
+    a.href = "#";
+    let menu = ["home", "About", "service", "Contact"];
+    menu.forEach((val) => {
+        li = document.createElement('li');
+        a = document.createElement('a');
+        a.href = "#"
+        a.innerHTML = val;
+        a.style.color = "black";
+        a.style.textDecoration = "none"
+        li.appendChild(a);
+        ul.appendChild(li);
+
+    })
+
+
+
+
+
+    let button = document.createElement('button');
+    button.innerHTML = "Click Me";
+    button.style.padding = "10px"
+    button.style.position = "absolute";
+    button.style.top = "0%";
+    button.style.right = "0px";
+
+
+
+
+    button.addEventListener('click', () => {
+        if (box.style.display == "none" && nav.style.display == "none") {
+            box.style.display = "block";
+            nav.style.display = "block";
+        } else {
+            box.style.display = "none"
+            nav.style.display = "none"
+        }
+
+    })
+
+    root.appendChild(button);
+    root.appendChild(box);
+    root.appendChild(nav);
+    nav.appendChild(ul)
+    ul.appendChild(li)
+    li.appendChild(a)
+
+
+</script>
+
+</html>

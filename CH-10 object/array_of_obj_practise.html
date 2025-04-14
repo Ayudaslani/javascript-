@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Of object</title>
+</head>
+
+<body>
+
+    <h1 align="center"> Array Of object</h1>
+
+    <table border="1" cellpadding="10">
+
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>age</th>
+
+            </tr>
+        </thead>
+        <tbody id="user">
+
+        </tbody>
+    </table>
+
+
+
+</body>
+
+<script type="text/javascript">
+
+    // let obj = [
+    //     { id: 1, name: "ayushi", age: 22 },
+    //     { id: 2, name: "mihir", age: 24 },
+    //     { id: 3, name: "abc", age: 27 },
+    //     { id: 4, name: "john", age: 21 },
+    //     { id: 5, name: "doe", age: 23 },
+    //     { id: 6, name: "smith", age: 30 },
+    //     { id: 7, name: "emma", age: 25 },
+    //     { id: 8, name: "oliver", age: 28 },
+    //     { id: 9, name: "sophia", age: 26 },
+    //     { id: 10, name: "liam", age: 29 },
+    //     { id: 11, name: "ava", age: 31 },
+    //     { id: 12, name: "william", age: 33 },
+    //     { id: 13, name: "james", age: 35 },
+    //     { id: 14, name: "ben", age: 22 },
+    //     { id: 15, name: "lily", age: 24 },
+    //     { id: 16, name: "lucas", age: 26 },
+    //     { id: 17, name: "grace", age: 27 },
+    //     { id: 18, name: "noah", age: 32 },
+    //     { id: 19, name: "charlotte", age: 34 },
+    //     { id: 20, name: "mason", age: 36 },
+    //     { id: 21, name: "harper", age: 37 },
+    //     { id: 22, name: "elijah", age: 40 },
+    //     { id: 23, name: "amelia", age: 45 },
+    //     { id: 24, name: "henry", age: 50 },
+    //     { id: 25, name: "jack", age: 55 }
+    // ];
+
+
+    // let tbl = '';
+    // obj.map((val) => {
+    //     tbl += `
+    //         <tr>
+    //             <td>${val.id}</td>
+    //             <td>${val.name}</td>
+    //             <td>${val.age}</td>
+    //         </tr>
+    //     `
+
+    // })
+
+
+
+
+    // document.getElementById('user').innerHTML = tbl;
+
+
+
+    // let ans = obj.filter((val) => {
+    //     return val.age < 30;
+    // })
+
+    // console.log(ans);
+
+
+    let person = [
+        { id: 1, name: "ayushi", age: 20 },
+        { id: 2, name: "mihir", age: 21 },
+        { id: 3, name: "mohit", age: 22 },
+        { id: 4, name: "ansi", age: 23 },
+        { id: 5, name: "denisha", age: 24 },
+        { id: 6, name: "dharmik", age: 25 },
+        { id: 7, name: "kano", age: 26 },
+        { id: 8, name: "gopi", age: 27 },
+        { id: 9, name: "dhanvi", age: 28 },
+        { id: 10, name: "dihan", age: 29 },
+        { id: 11, name: "shyam", age: 18 },
+        { id: 12, name: "himali", age: 19 },
+        { id: 13, name: "krishna", age: 24 },
+        { id: 14, name: "jeet", age: 24 },
+        { id: 15, name: "ayush", age: 20 }
+
+    ]
+
+    let tbl = ' ';
+    person.map((val) => {
+        tbl += `
+            <tr>
+                <td>${val.id}</td>
+                <td>${val.name}</td>
+                <td>${val.age}</td>
+             
+            </tr>
+        `
+    })
+
+    document.getElementById("user").innerHTML = tbl;
+
+
+
+
+
+</script>
+
+
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> display the person's details</title>
+</head>
+
+<body>
+    <h1 align="center"> display the person's details</h1>
+
+    <script type="text/javascript">
+        class Person {
+            constructor(name, age, country) {
+                this.name = name;
+                this.age = age;
+                this.country = country;
+
+            }
+
+            getData() {
+                document.writeln(`Name :- ${this.name}<br> Age :- ${this.age}<br>Country :- ${this.country}<br>`);
+
+            }
+        }
+
+        let p1 = new Person("XYZ", 25, "USA");
+        let p2 = new Person("PQR", 20, "IND");
+
+        let arr = [p1, p2];
+        // for (let i = 0; i < arr.length; i++) {
+        //     arr[i].getData();
+        // }
+
+        arr.forEach((val) => {
+            val.getData();
+        })
+    </script>
+</body>
+
+</html>

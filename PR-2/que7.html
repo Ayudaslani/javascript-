@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>percentage and grade </title>
+</head>
+
+<body>
+
+    <h1 align="center"> percentage and grade </h1>
+</body>
+<script>
+
+    let physics = parseFloat(prompt("Enter the physics subject marks : "));
+    let chemistry = parseFloat(prompt("Enter the chemistry subject marks : "));
+    let biology = parseFloat(prompt("Enter the biology subject marks : "));
+    let mathematics = parseFloat(prompt("Enter the mathematics subject marks : "));
+    let computer = parseFloat(prompt("Enter the computer subject marks : "));
+
+    let total = physics + chemistry + biology + mathematics + computer;
+
+    let per = parseFloat(total / 5);
+    let grade;
+
+    if (per >= 91 && per <= 100) {
+        grade = "A+";
+    } else if (per >= 81 && per <= 90) {
+        grade = "A";
+    } else if (per >= 71 && per <= 80) {
+        grade = "B+";
+    } else if (per >= 61 && per <= 70) {
+        grade = "B";
+    } else if (per >= 61 && per <= 60) {
+        grade = "C+";
+    } else if (per >= 51 && per <= 50) {
+        grade = "C";
+    } else if (per >= 41 && per <= 40) {
+        grade = "D";
+    } else if (per >= 33 && per <= 0) {
+        alert("You are Fail... !!!");
+    }
+    else {
+        alert("this is wrong !!!!!");
+    }
+
+    document.write(` percentage is ${per} => Grade : ${grade}`);
+</script>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h1>Object </h1>
+    <h2 id="id"></h2>
+    <h2 id="name"></h2>
+    <h2 id="age"></h2>
+    <h2 id="course"></h2>
+    <h2 id="address"></h2>
+</body>
+
+<script>
+    //  1st way to create an object 
+
+    // let obj = {
+    //     id: 1,
+    //     name: `ayushi`,
+    //     age: 20,
+    //     course: `full stack devlopment`
+    // }
+
+    // console.log(obj.age);
+    // console.log(obj['name']);
+
+    // console.log(obj);
+
+    // 2nd way to create an object
+    // let obj = new Object();
+
+    // obj.id = 1;
+    // obj.name = 'ayushi',
+    //     obj.age = 20,
+    //     obj.course = 'full stack devlopment'
+
+
+
+
+    // document.getElementById('id').innerHTML = ` id : ${obj.id}`;
+    // document.getElementById('name').innerHTML = ` name : ${obj.name}`;
+    // document.getElementById('age').innerHTML = ` age : ${obj.age}`;
+    // document.getElementById('course').innerHTML = ` courser : ${obj.course}`;
+
+    // console.log(obj);
+    // console.log(obj['name']);
+
+
+    // 3 nd way to create an object
+
+    let obj = {};
+    obj.id = 1;
+    obj.name = "mihir";
+    obj.age = 20;
+    obj.course = "full stack devlopment ";
+
+    console.log(obj);
+
+
+    obj.address = "abc circle surat"
+    obj.address = "abc circle "
+
+    delete obj.address;
+
+
+
+    document.getElementById('id').innerHTML = `id : ${obj.id}`;
+    document.getElementById('name').innerHTML = `name : ${obj.name}`;
+    document.getElementById('age').innerHTML = `age : ${obj.age}`;
+    document.getElementById('course').innerHTML = `course : ${obj.course}`;
+    document.getElementById('address').innerHTML = `address : ${obj.address}`;
+
+
+    console.log(obj.hasOwnProperty("name"));
+
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>delete element in arry</title>
+</head>
+
+<body>
+    <h1 align="center">delete element in arry</h1>
+</body>
+
+<script>
+    let n = parseInt(prompt("Enter the size of array :"));
+
+    let arr = [];
+
+    for (let i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt(`Enter the element ${i + 1}`));
+    }
+
+    document.write(" Input Array :- <br>");
+    for (let i = 0; i < n; i++) {
+        document.write(arr[i] + " ");
+    }
+
+    document.write("<br>");
+
+    let pos = parseInt(prompt("Enter the position of element to be deleted :"));
+
+
+
+
+
+    for (let i = pos; i < n; i++) {
+        arr[i] = arr[i + 1];
+    }
+    n--;
+
+
+    document.write(" Output  Array :- <br>");
+    for (let i = 0; i < n; i++) {
+        document.write(arr[i] + " ");
+    }
+
+</script>
+
+</html>

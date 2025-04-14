@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class and object</title>
+</head>
+
+<body>
+    <h1>class and object</h1>
+    <script type="text/javascript">
+        // class pen {
+        //     color() {
+        //         document.write(`Pen color is blue` + "<br>");
+        //     }
+        //     company() {
+        //         document.write(`Pen company is saino softek` + "<br>");
+        //     }
+        //     use() {
+        //         document.write(`Pen is used for writing` + "<br>");
+        //     }
+        // }
+
+        // let p = new pen();
+        // p.color();
+        // p.company();
+        // p.use();
+
+
+        class arithmetic {
+            add(a, b) {
+                return a + b;
+            }
+            sub(a, b) {
+                return a - b;
+            }
+            mul(a, b) {
+                return a * b;
+            }
+            div(a, b) {
+                return a / b;
+            }
+            module(a, b) {
+                return a % b;
+            }
+
+        }
+
+        let arr = new arithmetic();
+        document.write(`sum :- ${arr.add(100, 50)}` + "<br>");
+        document.write(`sub :- ${arr.sub(100, 50)}` + "<br>");
+        document.write(`mul :- ${arr.mul(100, 50)}` + "<br>");
+        document.write(`div :- ${arr.div(100, 50)}` + "<br>");
+        document.write(`module :- ${arr.module(100, 50)}` + "<br>");
+    </script>
+</body>
+
+
+</html>

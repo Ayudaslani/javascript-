@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Function</title>
+</head>
+
+<body>
+    <h1>Nested Function</h1>
+</body>
+
+<script>
+
+
+
+
+    let n = parseInt(prompt("Enter any number :"));
+    let originalnum = n;
+    let rev = 0;
+
+    const revser = (n) => {
+
+        while (n != 0) {
+            let rem = n % 10;
+            rev = rev * 10 + rem;
+            n = Math.floor(n / 10);
+
+        }
+        return rev;
+
+
+    }
+    let ans = revser(originalnum);
+    if (originalnum == ans) {
+        document.write("Yesssss.....");
+    } else {
+        document.write("Noooo...");
+    }
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

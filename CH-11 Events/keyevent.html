@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard events</title>
+</head>
+
+<body>
+    <h1>keyboard Events</h1>
+
+    <!-- keydown -->
+    Name : <input type="text" id="name" onkeydown="data()">
+    <h2 id="user"></h2>
+
+    <!-- keyup -->
+
+    name :- <input type="text" id="name" onkeyup="data()">
+    <h2 id="user"></h2>
+    <h2 id="user1"></h2>
+
+</body>
+<script>
+    let count = 0;
+    let data = () => {
+        count++;
+        document.getElementById('user').innerHTML = count;
+        document.getElementById('user1').innerHTML = count;
+    }
+
+
+</script>
+
+</html>

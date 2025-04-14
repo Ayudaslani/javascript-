@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add user</title>
+</head>
+
+<body>
+    <h1 align="center">add user</h1>
+    <table align="center">
+        <tr>
+            <td>Name :</td>
+            <td><input type="text" id="name"></td>
+        </tr>
+        <tr>
+            <td>gender :</td>
+            <td>
+                <input type="radio" name="gender" id="gender" value="male">male
+                <input type="radio" name="gender" id="gender" value="female">female
+
+            </td>
+        </tr>
+        <tr>
+            <td>city :</td>
+            <td>
+                <select name="city" id="city">
+                    <option value="0">--select city--</option>
+                    <option value="surat">surat</option>
+                    <option value="vapi">vapi</option>
+                    <option value="rajkot">rajkot</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" onclick="add()">submit</button></td>
+        </tr>
+
+    </table>
+    <br><br>
+    <table align="center" border="1" cellpadding="10px">
+        <tr>
+            <thead>
+
+                <th>name</th>
+                <th>gender</th>
+                <th>city</th>
+            </thead>
+            <tbody id="new">
+
+            </tbody>
+        </tr>
+
+    </table>
+    <script type="text/javascript">
+        let arr = [];
+
+        let adduser = () => {
+            let tbl = " ";
+            arr.forEach((val) => {
+                tbl += `
+                    <tr>
+                        <td>${val.name}</td>
+                        <td>${val.gender}</td>
+                        <td>${val.city}</td>
+                    </tr>
+                `
+            })
+            document.getElementById('new').innerHTML = tbl;
+        }
+
+        const add = () => {
+            let name = document.getElementById('name').value;
+            let gender = document.querySelector('input[name="gender"]:checked').value;
+            let city = document.getElementById('city').value;
+
+            let obj = {
+                name: name,
+                gender: gender,
+                city: city
+
+            }
+            arr.push(obj);
+            alert("ok");
+
+            adduser();
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

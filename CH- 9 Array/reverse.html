@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Element Of Array</title>
+</head>
+
+<body>
+    <h1>Reverse Element Of Array</h1>
+</body>
+
+<script>
+    let n = parseInt(prompt("Enter the size of array :"));
+
+    document.write("Input Of array :");
+    let a = [];
+    for (let i = 0; i < n; i++) {
+        a[i] = parseInt(prompt(`Enter the ${i} :-`));
+    }
+
+    for (let i = 0; i < n; i++) {
+        document.write(`${a[i]}` + "&nbsp;");
+    }
+
+    let b = n - 1;
+    document.write("Output of array : ");
+    for (let i = 0; i < n / 2; i++, b--) {
+        let c = a[i];
+        a[i] = a[b];
+        a[b] = c;
+
+    }
+    for (let i = 0; i < n; i++) {
+        document.write(`${a[i]}` + "&nbsp;");
+    }
+</script>
+
+</html>

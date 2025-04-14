@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 align="center"> Bill </h1>
+
+</body>
+
+<script>
+
+    let unit = parseFloat(prompt("Enter the unit "));
+    let totalbil;
+
+    if (unit <= 50) {
+
+        totalbil = parseFloat(unit * 0.50);
+    } else if (unit <= 150) {
+        totalbil = parseFloat(25 + ((unit - 50) * 0.75));
+
+    } else if (unit <= 250) {
+        totalbil = parseFloat(100 + ((unit - 150) * 1.20));
+    } else {
+        totalbil = parseFloat(220 + ((unit - 250) * 1.50));
+    }
+
+    let total = parseFloat(totalbil + (totalbil * 0.20));
+
+    document.write(`Total bill is  = ${total.toFixed(2)} `);
+</script>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eligible for vote or not</title>
+</head>
+
+<body>
+    <h1 align="center">Eligible for vote or not</h1>
+</body>
+
+<script>
+
+    let age = parseInt(prompt("Enter your age :-"));
+
+    function TNRN() {
+        if (age >= 18) {
+            document.write(`You can Eligible for vote`);
+        } else {
+            document.write(`You can not Eligible for vote`);
+        }
+    }
+
+    document.write("Take Nothing Return Nothing <br>");
+    TNRN();
+    document.write("<br><br>");
+
+    function TSRN(age) {
+        if (age >= 18) {
+            document.write(`You can Eligible for vote`);
+        } else {
+            document.write(`You can not Eligible for vote`);
+        }
+    }
+    document.write("Take something Return Nothing <br>");
+    TSRN(age);
+    document.write("<br>");
+    document.write("<br>");
+
+    function TSRS(age) {
+        if (age >= 18) {
+            document.write(`You can Eligible for vote`);
+        } else {
+            document.write(`You can not Eligible for vote`);
+        }
+
+        return [age];
+    }
+
+    document.write("Take something Return something <br>");
+    TSRS(age);
+    document.write("<br><br>");
+
+
+    function TNRS() {
+        if (age >= 18) {
+            document.write(`You can Eligible for vote`);
+        } else {
+            document.write(`You can not Eligible for vote`);
+        }
+
+        return [age];
+    }
+
+    document.write("Take nothing Return something <br>");
+    TSRS();
+
+
+
+
+</script>
+
+</html>

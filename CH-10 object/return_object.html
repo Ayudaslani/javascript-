@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return object</title>
+</head>
+
+<body>
+    <h1 align="center">return object</h1>
+
+
+</body>
+
+<script>
+
+    function student(id, name, age, course) {
+        let std = {
+            id: 1,
+            name: "ayushi",
+            age: 20,
+            course: "BCA"
+        }
+
+        return std;
+    }
+
+    let ans = student();
+    document.write(`ID: ${ans.id}, Name: ${ans.name}, Age: ${ans.age} , Course : ${ans.course}`);
+
+
+
+
+
+</script>
+
+</html>

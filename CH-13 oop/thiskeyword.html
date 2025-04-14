@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This KeyWord</title>
+</head>
+
+<body>
+    <h1 align="center">This KeyWord </h1>
+</body>
+
+<script type="text/javascript">
+    class add {
+        constructor(a, b) {
+
+            this.a = a;
+            this.b = b;
+        }
+        onlyadd() {
+            document.write(`Sum of ${this.a} + ${this.b} = ${this.a + this.b}` + "<br>");
+            document.write(`sub of ${this.a} - ${this.b} = ${this.a - this.b}` + "<br>");
+            document.write(`mul of ${this.a} * ${this.b} = ${this.a * this.b}` + "<br>");
+            document.write(`div of ${this.a} / ${this.b} = ${this.a / this.b}` + "<br>");
+        }
+    }
+    let aaa = new add(10, 55);
+    aaa.onlyadd();
+
+</script>
+
+</html>

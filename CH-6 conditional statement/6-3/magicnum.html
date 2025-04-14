@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Number</title>
+</head>
+
+<body>
+    <h1>Magic Number</h1>
+</body>
+
+<script>
+
+    let num = parseInt(prompt("Enter any Number :"));
+    let sum = 0;
+    let mul = 1;
+
+    while (num != 0) {
+        let rem = num % 10;
+        sum = sum + rem;
+        mul = mul * rem;
+        num = Math.floor(num / 10);
+
+    }
+
+    document.write(sum + "<br>");
+    document.write(mul);
+
+    if (sum == mul) {
+        document.write("It's Magic number .....");
+    } else {
+        document.write("It's not  Magic number .....");
+    }
+
+
+</script>
+
+</html>

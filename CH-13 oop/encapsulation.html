@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encapsulation </title>
+</head>
+
+<body>
+    <h1>Encapsulation</h1>
+
+    <script type="text/javascript">
+        class A {
+            constructor(id, name, age) {
+                this.id = id;
+                this.name = name;
+                this.age = age;
+            }
+
+            getData() {
+                document.writeln(`Id  :- ${this.id} <br> Name :- ${this.name} <br> Age :- ${this.age} `);
+            }
+        }
+
+        let a = new A(1, "ayushi", 20);
+        a.getData();
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="demo">
+    <button onclick="test()">Test</button>
+    <p id="err"></p>
+
+    <script type="text/javascript">
+
+
+
+        test = () => {
+            let x = document.getElementById('demo').value;
+            try {
+                if (x.trim() == "") throw "empty";
+                if (x < 5) throw "too low";
+                if (x > 10) throw "too high";
+            } catch (e) {
+                document.getElementById('err').innerHTML = e;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

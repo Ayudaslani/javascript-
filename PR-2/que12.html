@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+</head>
+
+<body>
+    <h1 align="center">Basic calculator using ladder if else </h1>
+</body>
+
+<script>
+    let a = parseInt(prompt("Enter first number :"));
+    let b = parseInt(prompt("Enter second number :"));
+
+    let ch = prompt("Select the  choice + ,-,*,/");
+
+    if (ch == '+') {
+        document.write(`Addition of ${a} + ${b} =  ${a + b}`);
+    } else if (ch == '-') {
+        document.write(`subtraction of ${a} - ${b} =  ${a - b}`);
+    } else if (ch == '*') {
+        document.write(`multiplication of ${a} * ${b} =  ${a * b}`);
+    } else if (ch == '/') {
+        document.write(`division of ${a} / ${b} =  ${a / b}`);
+    } else {
+        document.write(" <h3>Invalid choice</h3>");
+    }
+</script>
+
+</html>

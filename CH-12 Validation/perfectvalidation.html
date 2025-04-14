@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation into form</title>
+</head>
+
+<body>
+    <h1 align="center">form </h1>
+    <table align="center">
+        <tr>
+            <td>Name :</td>
+            <td>
+                <input type="text" id="name">
+                <span id="nameerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Phone :</td>
+            <td>
+                <input type="number" id="phone">
+                <span id="phoneerror"></span>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Gender :</td>
+            <td>
+                <input type="radio" id="gender" value="male" name="gender"> male
+                <input type="radio" id="gender" value="female" name="gender"> female
+                <span id="gendererror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>City :</td>
+            <td>
+                <select name="city" id="city">
+                    <option value="0">--select city--</option>
+                    <option value="surat">surat</option>
+                    <option value="rajkot">rajkot</option>
+                    <option value="vapi">vapi</option>
+                    <option value="mumbai">mumbai</option>
+                </select>
+                <span id="cityerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Course :</td>
+            <td>
+                <input type="checkbox" id="course" name="course" value="html">html
+                <input type="checkbox" id="course" name="course" value="css">css
+                <input type="checkbox" id="course" name="course" value="c++">c++
+                <input type="checkbox" id="course" name="course" value="javascript">javascript
+                <span id="courseerror"></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" onclick="addrecord()">submit</button></td>
+        </tr>
+    </table>
+
+</body>
+
+<script>
+
+
+    addrecord = () => {
+        let name = document.getElementById('name').value;
+        let phone = document.getElementById('phone').value;
+        let gender = document.querySelector('input[name="gender"]:checked');
+        let city = document.getElementById('city').value;
+        let course = document.querySelector('input[name="course"]:checked');
+
+        if (!name) {
+            let nameerror = document.getElementById('nameerror');
+            nameerror.innerHTML = "Name is Required";
+            nameerror.style.color = "red";
+        }
+
+        if (!phone) {
+            let phoneerror = document.getElementById('phoneerror');
+            phoneerror.innerHTML = "phone is required";
+            phoneerror.style.color = "red";
+        } else {
+            let phone = document.getElementById('phone').value;
+            let phoneerror = document.getElementById('phoneerror');
+            if (!phone.length < 10) {
+
+                phoneerror.innerHTML = "phone length must be 10 digit";
+                phoneerror.style.color = "red";
+            }
+
+        }
+
+        if (!gender) {
+            let gendererror = document.getElementById('gendererror');
+            gendererror.innerHTML = "gender is required";
+            gendererror.style.color = "red";
+        }
+        if (city === '0') {
+            let cityerror = document.getElementById('cityerror');
+            cityerror.innerHTML = "city is required";
+            cityerror.style.color = "red";
+        }
+        if (!course) {
+            let courseerror = document.getElementById('courseerror');
+            courseerror.innerHTML = "course is required";
+            courseerror.style.color = "red";
+        }
+    }
+</script>
+
+</html>

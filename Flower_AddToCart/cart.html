@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart Page</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- Cart Page Header -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Shopping Cart</h1>
+
+        <!-- Cart Table -->
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cartdata"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Cart Summary -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <h5>Cart Summary</h5>
+                <div class="d-flex justify-content-between">
+                    <p>Shipping:</p>
+                    <p>Free</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <h4>Total:</h4>
+                    <h4 id="total"></h4>
+                </div>
+                <button class="btn btn-primary w-100 mt-3" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap 5 JS and Dependencies -->
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="watchman.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>

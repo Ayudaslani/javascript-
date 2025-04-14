@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>global object</title>
+</head>
+
+<body>
+
+    <div id="countdown" style="text-align:center;align-items: center; font-size:100px;"></div>
+
+    <p id="demo"></p>
+
+    <button onclick="me()"> Click me</button>
+
+    <script type="text/javascript">
+
+        // let i = 0;
+        // let demo = () => {
+        //     if (i <= 10) {
+        //         document.write(`${i++}`);
+        //     }
+
+        // }
+        // setInterval(() => {
+        //     demo();
+        // }, 1000);
+
+
+        // let i = 5;
+        // let interval = setInterval(() => {
+        //     if (i >= 0) {
+        //         document.getElementById("countdown").innerHTML = i--;
+        //     } else {
+        //         clearInterval(interval);
+        //     }
+
+        // }, 1000);
+
+
+        // set time out
+        // me = () => {
+        //     setTimeout(() => {
+        //         alert("Hello");
+        //     }, 2000);
+
+        // }
+        // me();
+
+
+        // clearInterval
+
+        // let cnt = 0;
+
+        // let counter = setInterval(() => {
+        //     document.write(`${cnt++}`);
+
+        //     if (cnt == 10) {
+        //         clearInterval(counter);
+        //     }
+        // }, 1000);
+
+
+        let timer = () => {
+            const date = new Date();
+            document.getElementById('demo').innerHTML = date.toLocaleTimeString();
+
+        }
+
+        let ans = setInterval(() => {
+            timer();
+        }, 1000);
+
+        const me = () => {
+            clearInterval(ans);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+
+</html>
