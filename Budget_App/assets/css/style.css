@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(242, 242, 249);
+}
+
+.budget {
+
+    padding: 30px 10px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    height: 227px;
+
+}
+
+.setbudget {
+    padding: 7px 20px;
+    margin: 20px 0px;
+    border: none;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.budget input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.Expenses {
+    padding: 7px 20px;
+    background-color: white;
+
+}
+
+.setExpenses {
+    padding: 7px 20px;
+    margin: 20px 0px;
+    border: none;
+    background-color: blue;
+    border-radius: 5px;
+    color: white;
+
+}
+
+.Expenses input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.expense {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 30px;
+
+}
+
+.expense tr td {
+    padding: 30px;
+}
+
+.balance {
+    background-color: rgba(0, 0, 255, 0.726);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.balance input {
+    background-color: transparent;
+    border: none;
+    color: white;
+}

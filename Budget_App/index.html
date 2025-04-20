@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <h1 align="center">Budget App</h1>
+    <section class="p-5">
+        <div class="container">
+            <div class="row d-flex">
+                <div class="col-4">
+                    <div class="budget">
+                        <h4>Budget</h4>
+                        <input type="text" id="Totalamt" placeholder="Total Amount"><br>
+                        <button type="button" class="setbudget" onclick="setbudget()"> Set Buget</button>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="Expenses">
+                        <h4>Expenses</h4>
+                        <input type="hidden" id="editid">
+                        <input type="text" id="list"><br>
+                        <input type="text" id="amount"><br>
+                        <button type="button" onclick="expenseuser()" id="add" class="setExpenses"> Check
+                            Amount</button>
+                        <button type="button" onclick="edit()" id="edit" class="setExpenses"> Edit Amount</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="balance d-flex justify-content-between ">
+                        <div class="col-3">
+                            <h4>Total Budget</h4>
+                            <input type="text" id="tbudget">
+                        </div>
+                        <div class="col-3">
+                            <h4>Expenses</h4>
+                            <input type="text" id="texpenses">
+
+                        </div>
+                        <div class="col-3">
+                            <h4>Balance</h4>
+                            <input type="text" id="tbalance">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-8">
+                    <div class="expense">
+                        <h2>Expenses List</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="getexpenses">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
