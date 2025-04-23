@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Welcome to My Document</h1>
+
+    <table border="1" cellpadding="20px">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>Firstname</th>
+                <th>lastname</th>
+                <th>age</th>
+
+            </tr>
+        </thead>
+        <tbody id="getuser">
+
+        </tbody>
+    </table>
+
+
+    <script>
+
+        const user = async () => {
+            let res = await fetch(`https://dummyjson.com/users`, {
+                method: 'GET',
+            });
+            let data = await res.json()
+
+            let tbl = " ";
+            data.users.forEach((val) => {
+                tbl += `
+                    <tr>
+                        <td>${val.id}</td>
+                        <td>${val.firstName}</td>
+                        <td>${val.lastName}</td>
+                        <td>${val.age}</td>
+                    </tr>
+                `;
+            });
+            document.getElementById('getuser').innerHTML = tbl;
+        }
+        user();
+
+    </script>
+</body>
+
+</html>

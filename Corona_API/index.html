@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>COVID-19 Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: 'Segoe UI', sans-serif;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+
+        header {
+            text-align: center;
+            padding: 50px 20px 20px;
+        }
+
+        .stat-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        .search-box {
+            max-width: 400px;
+            margin: 0 auto 40px;
+
+        }
+
+        .footer {
+            text-align: center;
+            padding: 15px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1 class="display-5 fw-bold">🦠 COVID-19 Tracker</h1>
+        <p class="lead">Search country-wise and stay informed</p>
+    </header>
+
+    <div class="container search-box">
+        <div class="input-group mb-4">
+            <input type="text" id="countryInput" class="form-control form-control-lg"
+                placeholder="Enter country name..." />
+            <button class="btn btn-light btn-lg" onclick="searchCountry()">Search</button>
+        </div>
+    </div>
+
+    <main class="container">
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-card">
+                    <h5>Total Cases</h5>
+                    <p class="h3 text-warning" id="totalCases">--</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-card">
+                    <h5>Recovered</h5>
+                    <p class="h3 text-success" id="totalRecovered">--</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-card">
+                    <h5>Deaths</h5>
+                    <p class="h3 text-danger" id="totalDeaths">--</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- New row for detailed information -->
+        <div class="row mt-4 justify-content-center">
+            <div class="col-md-6">
+                <div class="stat-card">
+                    <h5>More Details</h5>
+                    <p class="mb-1">country: <span id="country">--</span></p>
+                    <p class="mb-1">active: <span id="active">--</span></p>
+                    <p class="mb-1"> tests: <span id="tests">--</span></p>
+                    <p class="mb-1">oneTestPerPeople: <span id="oneTestPerPeople">--</span></p>
+                    <p class="mb-1">oneCasePerPeople: <span id="oneCasePerPeople">--</span></p>
+                    <p class="mb-1">oneDeathPerPeople: <span id="oneDeathPerPeople">--</span></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        &copy; 2025 Ayushi | 💉 API
+    </footer>
+
+
+    <script>
+
+        const searchCountry = () => {
+            const country = document.getElementById("countryInput").value;
+
+            fetch(`https://disease.sh/v3/covid-19/countries/${country}`, {
+                method: "GET",
+            })
+                .then(res => res.json())
+                .then((data) => {
+                    document.getElementById("totalCases").innerHTML = data.cases;
+                    document.getElementById("totalDeaths").innerHTML = data.deaths;
+                    document.getElementById("totalRecovered").innerHTML = data.recovered;
+                    document.getElementById("tests").innerHTML = data.tests;
+                    document.getElementById("country").innerHTML = data.country;
+                    document.getElementById("active").innerHTML = data.active;
+                    document.getElementById("oneTestPerPeople").innerHTML = data.oneTestPerPeople;
+                    document.getElementById("oneCasePerPeople").innerHTML = data.oneCasePerPeople;
+                    document.getElementById("oneDeathPerPeople").innerHTML = data.oneDeathPerPeople;
+
+                    const country = document.getElementById("countryInput").value = "";
+
+
+                    console.log(data);
+
+                })
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
