@@ -16,6 +16,7 @@
         const data = async () => {
             try {
                 const res = await fetch(`https://dummyjson.com/users`, {
+       
                     method: 'GET',
                 })
                 const json = await res.json();
